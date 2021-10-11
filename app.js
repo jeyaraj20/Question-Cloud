@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var cors = require('cors')
 var userRouter = require('./routers/task');
+var questionRouter = require('./routers/question');
 var app = express();
 app.use(cors())
 
@@ -18,6 +19,8 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use('/', userRouter);
+app.use('/', questionRouter);
+
 
 app.listen(PORT, function () {
   console.log('Listening on port ' + PORT);
