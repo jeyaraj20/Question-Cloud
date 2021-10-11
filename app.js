@@ -9,9 +9,9 @@ app.use(cors())
 
 var PORT = 8080;
 var HOST_NAME = 'localhost';
-var DATABASE_NAME = 'task-app';
+var DATABASE_NAME = 'question-cloud';
 
- //mongoose.connect('mongodb://' + HOST_NAME + '/' + DATABASE_NAME);
+ mongoose.connect('mongodb://' + HOST_NAME + '/' + DATABASE_NAME);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
